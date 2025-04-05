@@ -13,12 +13,9 @@ export default function SignIn() {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <>
-      <PageMeta
-        title='React.js SignIn Dashboard | TailAdmin - Next.js Admin Dashboard Template'
-        description='This is React.js SignIn Tables Dashboard page for TailAdmin - React.js Tailwind CSS Admin Dashboard Template'
-      />
-      <div className='relative flex w-full min-h-screen px-4 py-6 overflow-hidden bg-white z-1 dark:bg-gray-900 sm:p-0'>
-        <div className='flex flex-col flex-1 p-6 rounded-2xl sm:rounded-none sm:border-0 sm:p-8'>
+      <PageMeta title='Sign In' description='This is SignIn page' />
+      <div className='relative flex w-full h-screen px-4 py-6 overflow-hidden bg-white z-1 dark:bg-gray-900 sm:p-0'>
+        <div className='flex flex-col flex-1 p-6 rounded-2xl sm:rounded-none sm:border-0 sm:p-8 overflow-y-scroll no-scrollbar'>
           <div className='w-full max-w-md pt-10 mx-auto'>
             <Link
               to='/'
@@ -147,12 +144,13 @@ export default function SignIn() {
         <div className='relative items-center justify-center flex-1 hidden p-8 z-1 bg-brand-950 dark:bg-white/5 lg:flex'>
           {/* <!-- ===== Common Grid Shape Start ===== --> */}
           <GridShape />
-          <div className='flex flex-col items-center max-w-xs'>
-            <Link to='/' className='block mb-4'>
+          <div className='flex flex-col items-center max-w-sm'>
+            <Link to='/signin' className='block mb-4'>
               <img src='./images/logo/auth-logo.svg' alt='Logo' />
             </Link>
-            <p className='text-center text-gray-400 dark:text-white/60'>
-              Free and Open-Source Tailwind CSS Admin Dashboard Template
+            <p className='text-center text-white dark:text-white/60'>
+              Platform digital untuk jadwal donor, pendaftaran pendonor, dan
+              pengelolaan stok darah.
             </p>
           </div>
         </div>

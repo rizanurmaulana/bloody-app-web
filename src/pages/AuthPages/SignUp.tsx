@@ -12,12 +12,9 @@ export default function SignUp() {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <>
-      <PageMeta
-        title='React.js SignUp Dashboard | TailAdmin - Next.js Admin Dashboard Template'
-        description='This is React.js SignUp Tables Dashboard page for TailAdmin - React.js Tailwind CSS Admin Dashboard Template'
-      />
-      <div className='relative flex w-full min-h-screen overflow-hidden bg-white z-1 dark:bg-gray-900'>
-        <div className='flex flex-col flex-1 p-6 rounded-2xl sm:rounded-none sm:border-0 sm:p-8'>
+      <PageMeta title='Sign Up' description='This is SignUp page' />
+      <div className='relative flex w-full h-screen overflow-hidden bg-white z-1 dark:bg-gray-900'>
+        <div className='flex flex-col flex-1 p-6 rounded-2xl sm:rounded-none sm:border-0 sm:p-8 overflow-y-scroll no-scrollbar'>
           <div className='w-full max-w-md pt-5 mx-auto sm:py-10'>
             <Link
               to='/'
@@ -57,7 +54,7 @@ export default function SignUp() {
                   {/* <!-- Fullname --> */}
                   <div>
                     <Label>
-                      Email<span className='text-error-500'>*</span>
+                      Fullname<span className='text-error-500'>*</span>
                     </Label>
                     <Input
                       type='text'
@@ -184,12 +181,13 @@ export default function SignUp() {
           {/* <!-- ===== Common Grid Shape Start ===== --> */}
           <GridShape />
           {/* <!-- ===== Common Grid Shape End ===== --> */}
-          <div className='flex flex-col items-center max-w-xs'>
-            <Link to='index.html' className='block mb-4'>
+          <div className='flex flex-col items-center max-w-sm'>
+            <Link to='/signup' className='block mb-4'>
               <img src='./images/logo/auth-logo.svg' alt='Logo' />
             </Link>
-            <p className='text-center text-gray-400 dark:text-white/60'>
-              Free and Open-Source Tailwind CSS Admin Dashboard Template
+            <p className='text-center text-white dark:text-white/60'>
+              Platform digital untuk jadwal donor, pendaftaran pendonor, dan
+              pengelolaan stok darah.
             </p>
           </div>
         </div>
