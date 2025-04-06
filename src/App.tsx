@@ -4,7 +4,6 @@ import AuthLayout from "./layout/AuthLayout";
 import SignIn from "./pages/AuthPages/SignIn";
 import SignUp from "./pages/AuthPages/SignUp";
 import Blank from "./pages/Blank";
-import Calendar from "./pages/Calendar";
 import Ecommerce from "./pages/Dashboard/ECommerce";
 import FormElements from "./pages/Forms/FormElements";
 import NotFound from "./pages/OtherPage/NotFound";
@@ -16,6 +15,8 @@ import Buttons from "./pages/UiElements/Buttons";
 import Images from "./pages/UiElements/Images";
 import Videos from "./pages/UiElements/Videos";
 import UserProfiles from "./pages/UserProfiles";
+import Calendar from "./pages/Events/Calendar";
+import Schedule from "./pages/Events/Schedule";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
             {/* Others Page */}
             <Route path="/profile" element={<UserProfiles />} />
             <Route path="/calendar" element={<Calendar />} />
+            <Route path="/schedule" element={<Schedule />} />
             <Route path="/blank" element={<Blank />} />
 
             {/* Forms */}
