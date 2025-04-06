@@ -246,7 +246,9 @@ export default function TableSchedule() {
       <Modal isOpen={isOpen} onClose={closeModal} className='max-w-[700px] m-4'>
         {selectedSchedule && (
           <div className='p-6'>
-            <h4 className='text-2xl font-semibold mb-4'>Edit Schedule</h4>
+            <h4 className='text-2xl font-semibold mb-4 dark:text-white/90'>
+              Edit Schedule
+            </h4>
 
             <div className='grid grid-cols-1 gap-4 lg:grid-cols-2'>
               <div>
