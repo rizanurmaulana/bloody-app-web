@@ -27,7 +27,6 @@ export default function DataTable<T>({
   placeholder = 'Cari...',
 }: DataTableProps<T>) {
   const [globalFilter, setGlobalFilter] = useState('');
-  const [pageSize, setPageSize] = useState(5);
 
   const table = useReactTable({
     data,
@@ -78,7 +77,7 @@ export default function DataTable<T>({
       </div>
 
       {/* Pagination */}
-      <DataTablePagination table={table} setPageSize={setPageSize} />
+      <DataTablePagination table={table} />
     </div>
   );
 }
