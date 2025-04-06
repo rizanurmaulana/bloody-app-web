@@ -12,6 +12,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import { ColumnDef } from '@tanstack/react-table';
+import { Table, TableBody, TableHeader } from '../ui/table';
 
 interface DataTableProps<T> {
   data: T[];
@@ -64,14 +65,14 @@ export default function DataTable<T>({
       <div className='overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-white/[0.05] dark:bg-white/[0.03]'>
         <div className='max-w-full overflow-x-auto'>
           <div className='min-w-[1102px]'>
-            <table className='w-full'>
-              <thead>
+            <Table>
+              <TableHeader className='border-b border-gray-100 dark:border-white/[0.05]'>
                 <DataTableHeader table={table} />
-              </thead>
-              <tbody>
+              </TableHeader>
+              <TableBody className='divide-y divide-gray-100 dark:divide-white/[0.05]'>
                 <DataTableBody table={table} />
-              </tbody>
-            </table>
+              </TableBody>
+            </Table>
           </div>
         </div>
       </div>
