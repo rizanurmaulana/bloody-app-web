@@ -9,12 +9,12 @@ interface Props {
 export default function DataTablePagination({ table, setPageSize }: Props) {
   return (
     <div className='mt-4 flex items-center justify-between'>
-      <div className='space-x-2'>
+      <div className='space-x-2 dark:text-white'>
         <span>Show: </span>
         <select
           value={table.getState().pagination.pageSize}
           onChange={(e) => setPageSize(Number(e.target.value))}
-          className='border rounded w-15 px-2 py-1'
+          className='border border-gray-200 dark:border-gray-700 rounded-lg w-15 px-2 py-1 dark:bg-gray-800'
         >
           {[5, 10, 20].map((size) => (
             <option key={size} value={size}>
