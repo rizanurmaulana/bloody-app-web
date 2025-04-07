@@ -9,7 +9,7 @@ export default function User() {
       <PageMeta title='User' description='This is User page' />
       <PageBreadcrumb pageTitle='User' />
       <div className='space-y-6'>
-        <ComponentCard title='User List'>
+        <ComponentCard title='Data User'>
           <UserTable />
         </ComponentCard>
       </div>

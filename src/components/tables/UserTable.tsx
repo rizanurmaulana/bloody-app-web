@@ -419,15 +419,15 @@ export default function UserTable() {
         cell: (info: any) => info.row.index + 1,
       },
       {
-        accessorKey: 'image',
+        accessorKey: 'name',
         header: 'Profile',
         cell: (info: any) => {
-          const { name, role } = info.row.original;
+          const { image, name, role } = info.row.original;
           return (
             <div className='flex items-center gap-3'>
               <div className='w-10 h-10 overflow-hidden rounded-full'>
                 <img
-                  src={info.getValue()}
+                  src={image}
                   alt={name}
                   className='object-cover w-full h-full'
                 />
@@ -482,15 +482,13 @@ export default function UserTable() {
         cell: (info: any) => {
           const { id } = info.row.original;
           return (
-            <div className='flex justify-center items-center gap-2'>
-              <Button
-                size='xs'
-                variant='outline'
-                onClick={() => handleOpenDetail(id)}
-              >
-                Detail
-              </Button>
-            </div>
+            <Button
+              size='xs'
+              variant='outline'
+              onClick={() => handleOpenDetail(id)}
+            >
+              Detail
+            </Button>
           );
         },
       },
