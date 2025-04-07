@@ -15,6 +15,7 @@ import { ColumnDef } from '@tanstack/react-table';
 import { Table, TableBody, TableHeader } from '../ui/table';
 
 interface DataTableProps<T> {
+  tableName?: string;
   data: T[];
   columns: ColumnDef<T>[];
   exportCSV?: () => void;
@@ -22,6 +23,7 @@ interface DataTableProps<T> {
 }
 
 export default function DataTable<T>({
+  tableName,
   data,
   columns,
   exportCSV,
@@ -48,7 +50,7 @@ export default function DataTable<T>({
         <div className='mb-4 flex flex-col gap-2 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-6'>
           <div>
             <h3 className='text-lg font-semibold text-gray-800 dark:text-white/90'>
-              User List
+              {tableName}
             </h3>
           </div>
           {/* Search and Export */}

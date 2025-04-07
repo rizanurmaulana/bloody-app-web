@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router';
 import { useSidebar } from '../context/SidebarContext';
 import {
   BoxCubeIcon,
+  BoxIcon,
   CalenderIcon,
   ChevronDownIcon,
   GridIcon,
@@ -41,8 +42,13 @@ const navItems: NavItem[] = [
     ],
   },
   {
+    icon: <BoxIcon />,
+    name: 'Fasilitas Kesehatan',
+    path: '/facility',
+  },
+  {
     icon: <UserIcon />,
-    name: 'User',
+    name: 'Data Pendonor',
     path: '/user',
   },
   {

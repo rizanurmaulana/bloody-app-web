@@ -18,6 +18,7 @@ import UserProfiles from './pages/UserProfiles';
 import Calendar from './pages/Events/Calendar';
 import Schedule from './pages/Events/Schedule';
 import User from './pages/User';
+import Facility from './pages/Facility';
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
             <Route path='/user' element={<User />} />
             <Route path='/calendar' element={<Calendar />} />
             <Route path='/schedule' element={<Schedule />} />
+            <Route path='/facility' element={<Facility />} />
             <Route path='/blank' element={<Blank />} />
 
             {/* Forms */}
