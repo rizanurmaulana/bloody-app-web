@@ -31,13 +31,14 @@ interface Schedule {
   date: string;
   start_time: string;
   end_time: string;
+  registered: number;
   quota: number;
   status: 'available' | 'full' | 'completed';
   created_at: string;
   updated_at: string;
 }
 
-const initialData: Schedule[] = [
+const data: Schedule[] = [
   {
     id: 1,
     pmi_id: 101,
@@ -47,6 +48,7 @@ const initialData: Schedule[] = [
     date: '2025-04-10',
     start_time: '09:00',
     end_time: '12:00',
+    registered: 30,
     quota: 50,
     status: 'available',
     created_at: '2025-04-01T08:00:00Z',
@@ -61,6 +63,7 @@ const initialData: Schedule[] = [
     date: '2025-04-12',
     start_time: '08:00',
     end_time: '11:00',
+    registered: 30,
     quota: 30,
     status: 'full',
     created_at: '2025-04-02T09:00:00Z',
@@ -75,6 +78,7 @@ const initialData: Schedule[] = [
     date: '2025-04-15',
     start_time: '10:00',
     end_time: '13:00',
+    registered: 40,
     quota: 40,
     status: 'completed',
     created_at: '2025-03-30T07:00:00Z',
@@ -84,7 +88,7 @@ const initialData: Schedule[] = [
 
 export default function TableSchedule() {
   const { isOpen, openModal, closeModal } = useModal();
-  const [scheduleData, setScheduleData] = useState<Schedule[]>(initialData);
+  const [scheduleData, setScheduleData] = useState<Schedule[]>(data);
   const [selectedSchedule, setSelectedSchedule] = useState<Schedule | null>(
     null,
   );
@@ -141,7 +145,7 @@ export default function TableSchedule() {
                   isHeader
                   className='px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400'
                 >
-                  PMI
+                  Penyelenggara
                 </TableCell>
                 <TableCell
                   isHeader
@@ -201,7 +205,9 @@ export default function TableSchedule() {
                     {schedule.start_time} - {schedule.end_time}
                   </TableCell>
                   <TableCell className='px-4 py-4 text-theme-sm text-gray-700 dark:text-white/80'>
-                    {schedule.quota}
+                    <span>
+                      {schedule.registered}/{schedule.quota}
+                    </span>
                   </TableCell>
                   <TableCell className='px-4 py-4 uppercase'>
                     <Badge
@@ -268,7 +274,7 @@ export default function TableSchedule() {
               </div>
 
               <div>
-                <Label>PMI</Label>
+                <Label>Penyelenggara</Label>
                 <Input
                   type='text'
                   value={selectedSchedule.pmi_name}

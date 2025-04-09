@@ -39,6 +39,7 @@ const navItems: NavItem[] = [
     subItems: [
       { name: 'Calendar', path: '/calendar', pro: false },
       { name: 'Schedule', path: '/schedule', pro: false },
+      { name: 'Jadwal Donor', path: '/user/schedule', pro: false },
     ],
   },
   {

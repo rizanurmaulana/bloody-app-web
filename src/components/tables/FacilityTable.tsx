@@ -169,7 +169,7 @@ export default function FacilityTable() {
   return (
     <>
       <DataTable<Facility>
-        tableName='Healthcare Facility List'
+        tableName='Daftar Fasilitas Kesehatan'
         data={data}
         columns={columns}
         placeholder='Search...'
@@ -179,7 +179,7 @@ export default function FacilityTable() {
         {selectedUser && (
           <div className='p-6'>
             <h4 className='text-2xl font-semibold mb-4 dark:text-white/90'>
-              Detail User
+              Detail Fasilitas Kesehatan
             </h4>
 
             <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
