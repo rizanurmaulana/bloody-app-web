@@ -510,6 +510,7 @@ export default function UserTable() {
   return (
     <>
       <DataTable<User>
+        tableName='Daftar Pendonor'
         data={userData}
         columns={columns}
         placeholder='Cari user...'
