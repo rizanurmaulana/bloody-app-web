@@ -20,6 +20,7 @@ import Schedule from './pages/Events/Schedule';
 import User from './pages/User';
 import Facility from './pages/Facility';
 import DonorSchedule from './pages/Events/DonorSchedule';
+import DonorRegistration from './pages/Events/DonorRegistration';
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
             <Route path='/calendar' element={<Calendar />} />
             <Route path='/schedule' element={<Schedule />} />
             <Route path='/user/schedule' element={<DonorSchedule />} />
+            <Route path='/user/schedule/:id' element={<DonorRegistration />} />
             <Route path='/facility' element={<Facility />} />
             <Route path='/blank' element={<Blank />} />
 

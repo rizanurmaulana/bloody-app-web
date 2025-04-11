@@ -2,7 +2,7 @@ import { CalendarClock, MapPin, UsersRound } from 'lucide-react';
 import Badge from '../ui/badge/Badge';
 
 type DonorSchedule = {
-  id: string;
+  id: number;
   title: string;
   location: string;
   date: string;
@@ -80,7 +80,7 @@ export default function DonorScheduleCardList({
                 </p>
                 <div className='flex justify-between items-center my-4'>
                   <a
-                    href='#'
+                    href={`schedule/${schedule.id}`}
                     className={`inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium text-white shadow-theme-xs ${
                       isFull
                         ? 'bg-gray-400 cursor-not-allowed'
