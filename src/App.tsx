@@ -4,7 +4,7 @@ import AuthLayout from './layout/AuthLayout';
 import SignIn from './pages/AuthPages/SignIn';
 import SignUp from './pages/AuthPages/SignUp';
 import Blank from './pages/Blank';
-import Ecommerce from './pages/Dashboard/ECommerce';
+import Dashboard from './pages/Dashboard/Overview';
 import FormElements from './pages/Forms/FormElements';
 import NotFound from './pages/OtherPage/NotFound';
 import BasicTables from './pages/Tables/BasicTables';
@@ -29,7 +29,7 @@ export default function App() {
         <Routes>
           {/* Dashboard Layout */}
           <Route element={<AppLayout />}>
-            <Route index path='/' element={<Ecommerce />} />
+            <Route index path='/' element={<Dashboard />} />
             {/* Others Page */}
             <Route path='/profile' element={<UserProfiles />} />
             <Route path='/user' element={<User />} />
